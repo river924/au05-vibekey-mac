@@ -1,0 +1,7 @@
+# Python 3.12
+hidapi==0.15.0
+mlx==0.32.4
+mlx-lm==0.32.2
+mlx-whisper==0.4.3
+numpy==2.5.4
+opencc==1.4.2
