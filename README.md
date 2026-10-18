@@ -89,7 +89,9 @@ Hammerspoon（hammerspoon/init.lua）
 | 旋鈕右轉 | 4 | F17 (0x6C) | 64 |
 | 旋鈕左轉 | 5 | F18 (0x6D) | 79 |
 
-**為什麼要用 F13～F18？** 出廠設定送的是 Enter、Esc、Backspace 這類一般按鍵，Mac 分不出是 AU05 還是鍵盤按的：兩者回報的 `keyboardEventKeyboardType` 都是 40。改成鍵盤上沒有的 F13～F18 後，所有功能都可以放心地只綁在 AU05 上，不會干擾鍵盤。
+**為什麼要用 F13～F18？** 出廠設定送的是 Enter、Esc、Backspace 這類一般按鍵，Mac 分不出是 AU05 還是鍵盤按的：兩者回報的 `keyboardEventKeyboardType` 都是 40。改成筆電鍵盤上沒有的 F13～F18 後，所有功能都可以放心地只綁在 AU05 上，不會干擾鍵盤。
+
+> **「需要實體按鍵」只適用於 Ulanzi Studio 的錄製欄位。** Studio 只能錄下你在實體鍵盤按得到的鍵，所以當時無法用它設定 F13～F18；後來改成直接向 AU05 寫入 USB HID usage code（`0x68`～`0x6D`），完全繞過 Studio，因此可以使用 F13～F18。曾嘗試的多修飾鍵組合已經放棄，現在裝置實際送出的不是組合鍵。
 
 ### 效能（M5 Max 實測）
 
